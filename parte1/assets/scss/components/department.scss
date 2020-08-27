@@ -1,0 +1,24 @@
+.department {
+    background-color: #ffa200;
+    padding: 15px 0px;
+
+    .department__container {
+        @include container();
+
+        .department__row {
+            @include make-row();
+            justify-content: center;
+
+            .department__card {
+                @include make-xs-column(12);
+                @include make-sm-column(4);
+
+                img {
+                    width: 100%;
+                    max-width: 370px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

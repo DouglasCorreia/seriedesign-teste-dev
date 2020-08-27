@@ -1,0 +1,29 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        display: none;
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        top: -180px;
+    }
+    100% {
+        top: 0px;
+    }
+}

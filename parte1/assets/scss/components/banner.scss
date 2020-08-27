@@ -1,0 +1,57 @@
+.slick-next,
+.slick-prev {
+    z-index: 10;
+}
+
+.slick-next {
+    right: 35px;
+}
+
+.slick-prev {
+    left: 35px;
+}
+
+.banner__arrow {
+    width: 42px;
+    height: 71px;
+    background-position: 0px 71px;
+    position: absolute;
+    top: 50%;
+    left: 180px;
+    z-index: 10;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.banner__arrow.right {
+    background-position: -48px 71px;
+    left: inherit;
+    right: 180px;
+}
+
+@media (max-width: 767px) {
+    .slick-slide {
+        img {
+            width: 250%;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .slick-slide {
+        img {
+            width: 160%;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .banner__arrow {
+        left: 0px;
+    }
+    .banner__arrow.right {
+        right: 0px;
+    }
+}

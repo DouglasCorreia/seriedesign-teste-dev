@@ -1,0 +1,219 @@
+header.header {
+    width: 100%;
+    -webkit-transition: 350ms all ease-in;
+    -moz-transition: 350ms all ease-in;
+    -o-transition: 350ms all ease-in;
+    transition: 350ms all ease-in;
+
+    .header__container {
+        @include container();
+
+        .header__row {
+            @include make-row();
+            align-items: center;
+
+            .header__search {
+                @include make-xs-column(12);
+                @include make-md-column(3);
+                position: relative;
+
+                input {
+                    border: 1px solid #cccccc;
+                    width: 100%;
+                    font-family: "Montserrat", Helvetica, sans-serif;
+                    font-weight: 400;
+                    color: #cccccc;
+                    padding: 15px 10px;
+                }
+
+                .header__search__icon {
+                    background: url("../images/sprites.png") 30px -91px;
+                    width: 28px;
+                    height: 29px;
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    display: inline-block;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+            }
+
+            .header__logo {
+                @include make-xs-column(8);
+                @include make-sm-column(4);
+                @include make-md-column(3);
+                @include make-md-column-offset(2);
+                text-align: center;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .header__account {
+                @include make-xs-column(4);
+                @include make-sm-column(2);
+                @include make-sm-column-offset(6);
+                @include make-md-column(2);
+                @include make-md-column-offset(2);
+                text-align: right;
+
+                ul {
+                    float: right;
+
+                    li {
+                        float: left;
+                        margin-right: 15px;
+
+                        &:last-child {
+                            margin: 0px;
+                        }
+
+                        a {
+                            display: inline-block;
+                            position: relative;
+
+                            .sprite--person {
+                                background-position: 0px -66px;
+                            }
+
+                            .sprite--cart {
+                                background-position: -26px -65px;
+                                width: 32px;
+                                height: 27px;
+                            }
+
+                            .header__account__count {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: #ffa200;
+                                border-radius: 100%;
+                                position: absolute;
+                                right: -12px;
+                                top: -13px;
+                                color: #fff;
+                                font-family: "Montserrat", Helvetica, sans-serif;
+                                font-weight: 400;
+                                font-size: 0.8em;
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header__top {
+        padding: 15px 0px;
+        background-color: #ffffff;
+    }
+
+    .header__bottom {
+        background-color: #8158c5;
+        padding: 15px 0px;
+
+        .header__menu {
+            @include make-xs-column(12);
+            @include make-md-column(11);
+
+            ul {
+                li {
+                    float: left;
+                    margin-right: 15px;
+
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+
+                    a {
+                        font-family: "Montserrat", Helvetica, sans-serif;
+                        font-weight: 300;
+                        font-size: 1em;
+                        text-decoration: none;
+                        color: #ffffff;
+                        display: block;
+                        -webkit-transition: 350ms all ease-in;
+                        -moz-transition: 350ms all ease-in;
+                        -o-transition: 350ms all ease-in;
+                        transition: 350ms all ease-in;
+
+                        &:hover {
+                            color: #ffa200;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header__menu--button {
+            @include make-xs-column(12);
+            @include make-md-column(1);
+            text-align: right;
+            cursor: pointer;
+
+            .sprite--menu {
+                background-position: 74px -87px;
+                width: 35px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+.header.fixed {
+    position: fixed;
+    animation: scrollDown ease-in 750ms;
+    z-index: 20;
+}
+
+@media (max-width: 1023px) {
+    header.header {
+        .header__container {
+            .header__row {
+                .header__logo,
+                .header__account {
+                    margin-top: 20px;
+                }
+
+                .header__menu {
+                    display: none;
+
+                    ul {
+                        li {
+                            float: none;
+                            text-align: center;
+                            margin: 0px;
+
+                            a {
+                                padding: 15px 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1023px) and (max-width: 1365px) {
+    header.header {
+        .header__bottom {
+            .header__menu {
+                ul {
+                    li {
+                        a {
+                            font-size: 0.85em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

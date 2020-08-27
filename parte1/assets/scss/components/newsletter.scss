@@ -1,0 +1,167 @@
+.newsletter {
+    background-color: #8158c5;
+
+    .newsletter__container {
+        @include container();
+
+        .newsletter__row {
+            @include make-row();
+
+            .newsletter__top {
+                @include make-row();
+                width: 100%;
+                border-bottom: 2px solid #ffa200;
+                justify-content: center;
+                padding: 15px 0px;
+                margin-left: 15px;
+                margin-right: 15px;
+
+                .newsletter__benefits {
+                    @include make-xs-column(12);
+                    @include make-md-column(4);
+                    @include make-lg-column(4);
+
+                    p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #ffffff;
+                        font-family: "Montserrat", Helvetica, sans-serif;
+                        font-weight: 400;
+                        font-size: 0.8em;
+
+                        span {
+                            display: inline-block;
+                            margin-right: 5px;
+                            font-weight: bold;
+                        }
+
+                        .sprite--newsletter {
+                            background-position: 55px -31px;
+                            width: 30px;
+                            height: 27px;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+
+            .newsletter__bottom {
+                @include make-xs-column(12);
+                @include make-sm-column(10);
+                @include make-sm-column-offset(1);
+                @include make-md-column(8);
+                @include make-md-column-offset(2);
+                text-align: center;
+                margin-top: 50px;
+
+                .bottom__title {
+                    font-family: "Montserrat", Helvetica, sans-serif;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                    font-size: 1.6em;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                }
+
+                .bottom__phrase {
+                    font-family: "Montserrat", Helvetica, sans-serif;
+                    font-weight: 300;
+                    font-size: 1em;
+                    color: #ffffff;
+                }
+
+                form {
+                    @include make-row();
+                    align-items: center;
+                    margin-top: 60px;
+                    margin-bottom: 40px;
+
+                    .bottom__input {
+                        @include make-xs-column(12);
+                        @include make-sm-column(5);
+                        @include make-md-column(4);
+
+                        input {
+                            width: 100%;
+                            padding: 8px 0px;
+                            font-family: "Montserrat", Helvetica, sans-serif;
+                            font-weight: 300;
+                            font-size: 0.8em;
+                            background-color: transparent;
+                            border-bottom: 1px solid #ffffff;
+                            color: #ffffff;
+
+                            &::placeholder {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+
+                    .bottom__input--email {
+                        @extend .bottom__input;
+                        @include make-xs-column(12);
+                        @include make-sm-column(5);
+                        @include make-md-column(5);
+                    }
+
+                    .bottom__input--submit {
+                        @include make-xs-column(12);
+                        @include make-sm-column(2);
+                        @include make-md-column(2);
+
+                        input {
+                            width: 100%;
+                            font-family: "Montserrat", Helvetica, sans-serif;
+                            font-weight: 600;
+                            font-size: 0.8em;
+                            color: #ffffff;
+                            background-color: #ffa200;
+                            text-transform: uppercase;
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .newsletter {
+        .newsletter__container {
+            .newsletter__row {
+                .newsletter__top {
+                    margin-left: 15px;
+                    margin-right: 15px;
+
+                    .newsletter__benefits {
+                        margin-top: 20px;
+
+                        &:first-child {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+
+                .newsletter__bottom {
+                    margin-top: 30px;
+
+                    .bottom__title {
+                        font-size: 1.4em;
+                    }
+
+                    form {
+                        margin-top: 30px;
+
+                        .bottom__input {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

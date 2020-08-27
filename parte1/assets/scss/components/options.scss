@@ -1,0 +1,36 @@
+.options {
+    display: none;
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    ul {
+        li {
+            .sprite--arrow {
+                background-position: -120px -61px;
+                width: 55px;
+                height: 51px;
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+
+            .sprite--whatsapp {
+                background-position: -64px -61px;
+                width: 55px;
+                height: 51px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .options {
+        right: 0px;
+        top: inherit;
+        bottom: -45px;
+    }
+}

@@ -1,0 +1,276 @@
+footer.footer {
+    .footer__container {
+        @include container();
+
+        .footer__row {
+            @include make-row();
+
+            .footer__social {
+                @include make-row();
+                margin: 0px;
+                padding-top: 30px;
+                padding-bottom: 50px;
+
+                .footer__logo {
+                    width: 25%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    margin-right: 5%;
+
+                    .footer__social__icons {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 30px;
+                        margin-bottom: 15px;
+
+                        ul {
+                            li {
+                                float: left;
+                                margin-right: 25px;
+
+                                &:last-child {
+                                    margin-right: 0px;
+                                }
+
+                                a {
+                                    height: 30px;
+                                    width: 30px;
+                                    border-radius: 100%;
+                                    text-align: center;
+                                    background-color: #7f7f7f;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    -webkit-transition: 350ms all ease-in;
+                                    -moz-transition: 350ms all ease-in;
+                                    -o-transition: 350ms all ease-in;
+                                    transition: 350ms all ease-in;
+
+                                    &:hover {
+                                        background-color: #ffa200;
+                                    }
+                                }
+
+                                .sprite--facebook {
+                                    background-position: 75px -64px;
+                                    width: 12px;
+                                    height: 20px;
+                                }
+
+                                .sprite--instagram {
+                                    background-position: 60px -63px;
+                                    width: 17px;
+                                    height: 23px;
+                                }
+
+                                .sprite--twitter {
+                                    background-position: 42px -63px;
+                                    width: 17px;
+                                    height: 23px;
+                                }
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        max-width: 272px;
+                        height: auto;
+                    }
+
+                    p {
+                        text-align: center;
+                        font-family: "Montserrat", Helvetica, sans-serif;
+                        font-weight: 300;
+                        font-size: 0.8em;
+                        color: #7f7f7f;
+                        margin-bottom: 8px;
+
+                        &:last-child {
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+
+                .footer__payments {
+                    width: 25%;
+                    margin-left: 5%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+
+                    ul {
+                        .menu__title {
+                            font-family: "Montserrat", Helvetica, sans-serif;
+                            font-weight: 600;
+                            font-size: 1em;
+                            text-transform: uppercase;
+                            color: #8158c5;
+                            float: none;
+                            margin-top: 0px;
+                        }
+
+                        li {
+                            float: left;
+                            margin-right: 10px;
+                            margin-top: 10px;
+
+                            .sprite {
+                                width: 41px;
+                            }
+
+                            .sprite--master {
+                                background-position: -51px 0px;
+                            }
+
+                            .sprite--american {
+                                background-position: -99px 0px;
+                            }
+
+                            .sprite--club {
+                                background-position: 105px 0px;
+                            }
+
+                            .sprite--hipercard {
+                                background-position: 0px -32px;
+                            }
+
+                            .sprite--aura {
+                                background-position: -51px -32px;
+                            }
+
+                            .sprite--elo {
+                                background-position: -99px -32px;
+                            }
+
+                            .sprite--boleto {
+                                background-position: 105px -32px;
+                            }
+                        }
+                    }
+                }
+
+                .footer__menu {
+                    width: 20%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+
+                    ul {
+                        .menu__title {
+                            font-family: "Montserrat", Helvetica, sans-serif;
+                            font-weight: 600;
+                            font-size: 1em;
+                            text-transform: uppercase;
+                            color: #8158c5;
+                        }
+
+                        li {
+                            margin-bottom: 15px;
+                            font-family: "Montserrat", Helvetica, sans-serif;
+                            font-weight: 400;
+                            font-size: 1em;
+                            color: #7f7f7f;
+
+                            &:last-child {
+                                margin-bottom: 0px;
+                            }
+
+                            a {
+                                color: #7f7f7f;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer__copyright {
+                @include make-xs-column(12);
+                border-top: 2px solid #f0f0f0;
+
+                p {
+                    font-family: "Montserrat", Helvetica, sans-serif;
+                    font-weight: 400;
+                    font-size: 0.8em;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 15px;
+                    margin-bottom: 30px;
+
+                    .sprite--logo {
+                        margin-left: 15px;
+                        width: 54px;
+                        height: 22px;
+                        background-position: 55px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    footer.footer {
+        .footer__container {
+            .footer__row {
+                .footer__social {
+                    .footer__logo {
+                        width: 100%;
+                        text-align: center;
+                        margin-right: 0px;
+                    }
+
+                    .footer__menu,
+                    .footer__payments {
+                        width: 100%;
+                        margin-top: 30px;
+                        margin-left: 0px;
+                    }
+                }
+
+                .footer__copyright {
+                    p {
+                        display: block;
+                        text-align: center;
+
+                        .sprite--logo {
+                            display: block;
+                            margin: 0px auto;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+    footer.footer {
+        .footer__container {
+            .footer__row {
+                .footer__social {
+                    .footer__logo {
+                        width: 100%;
+                        text-align: center;
+                        margin-right: 0px;
+
+                        .footer__social__icons {
+                            margin-top: 15px;
+                        }
+                    }
+
+                    .footer__menu,
+                    .footer__payments {
+                        width: 33%;
+                        margin-top: 30px;
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
